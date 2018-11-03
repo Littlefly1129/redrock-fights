@@ -103,6 +103,7 @@ public class Start {
             Hero hero2 = list.get(1);
             list.remove(0);
             list.remove(0);
+
             boolean winner = stage.battle(hero1, hero2);
             if (winner) {
                 winners.add(hero1);

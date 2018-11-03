@@ -12,7 +12,8 @@ public class Stage {
 
     /**
      * 开始战斗
-     * @param left 一个英雄
+     *
+     * @param left  一个英雄
      * @param right 另一个英雄
      * @return 如果是true 则left赢 否则right赢
      */
@@ -42,8 +43,15 @@ public class Stage {
 
         //开始战斗 一方血量为0或以下结束
         while (heros[0].getHp() > 0 && heros[1].getHp() > 0) {
-            System.out.println(heros[0].getName()+" hp:"+heros[0].getHp()+" mp:"+heros[0].getMp());
-            System.out.println(heros[1].getName()+" hp:"+heros[1].getHp()+" mp:"+heros[1].getMp());
+            //如果觉得太慢 把下面这一段删掉
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            //到这里的部分↑
+            System.out.println(heros[0].getName() + " hp:" + heros[0].getHp() + " mp:" + heros[0].getMp());
+            System.out.println(heros[1].getName() + " hp:" + heros[1].getHp() + " mp:" + heros[1].getMp());
 
             for (int i = 0; i < 2; i++) {
 
